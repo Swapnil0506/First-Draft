@@ -10,32 +10,33 @@ djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.1
 docutils==0.16
 gunicorn==20.1.0
-imageio @ file:///tmp/build/80754af9/imageio_1594161405741/work
+idna
+imageio 
 imagesize==1.2.0
-importlib-metadata @ file:///C:/ci/importlib-metadata_1593446511143/work
-intervaltree @ file:///tmp/build/80754af9/intervaltree_1594361675072/work
-ipykernel @ file:///C:/ci/ipykernel_1594745408489/work/dist/ipykernel-5.3.2-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1593447482397/work
+importlib-metadata 
+intervaltree 
+ipykernel 
+ipython 
 ipython-genutils==0.2.0
 ipywidgets==7.5.1
 isort==5.7.0
 itsdangerous==1.1.0
 jdcal==1.4.1
-jedi @ file:///C:/ci/jedi_1592833825077/work
+jedi 
 Jinja2==2.11.2
-joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
+joblib 
 json5==0.9.5
 jsonschema==3.2.0
 nose==1.3.7
-Pillow @ file:///C:/ci/pillow_1594298230227/work
+Pillow 
 psycopg2==2.8.6
 pyflakes==2.2.0
 Pygments==2.6.1
 PyJWT==2.1.0
 pylint==2.6.0
 python-dateutil==2.8.1
-python-jsonrpc-server @ file:///tmp/build/80754af9/python-jsonrpc-server_1594397536060/work
-python-language-server @ file:///C:/ci/python-language-server_1594162130238/work
+python-jsonrpc-server 
+python-language-server 
 pytz==2020.1
 PyWavelets==1.1.1
 pywin32==227
@@ -45,9 +46,9 @@ PyYAML==5.3.1
 pyzmq==19.0.1
 QDarkStyle==2.8.1
 QtAwesome==0.7.2
-qtconsole @ file:///tmp/build/80754af9/qtconsole_1592848611704/work
+qtconsole 
 QtPy==1.9.0
-regex @ file:///C:/ci/regex_1593419644658/work
-requests @ file:///tmp/build/80754af9/requests_1592841827918/work
+regex 
+requests 
 six==1.15.0
 urllib3==1.25.9
