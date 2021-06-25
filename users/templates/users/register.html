@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block headtag %}
+    <head>
+        <title>Register</title>
+    </head>
+{% endblock %}
+{% block content %}
+<div class="col-md-10">
+    <br><br>
+    <div class="content-section p-l-r-50 pt-3" style="font-size: 15px; background-color: rgb(240, 224, 180);">
+        <form method="POST" style="width: 600px;margin: auto;">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-5 text-center" style="color: black;">
+                    <h4 style="text-align: center;font-family: 'Noto Serif JP', serif; font-weight: 600;">Start your blogging journey right away! &#128516;</h4><br>REGISTER 
+                </legend>
+            {{ form|crispy }}
+            </fieldset>
+            <div class="form-group text-center">
+                <button class="btn btn-primary" style="width: 130px;" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3 text-center">
+            <small style="font-size: 13px;" class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}" style="text-decoration: none;">Sign In</a>
+            </small>
+        </div>
+    </div>
+</div>
+{% endblock content %}
