@@ -3,8 +3,6 @@ from django.contrib import messages
 from .forms import UserRegisterForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, request
-from django.db import transaction
-import stripe
 from django.views import View
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render
