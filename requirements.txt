@@ -10,7 +10,6 @@ djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.1
 docutils==0.16
 gunicorn==20.1.0
-idna @ file:///tmp/build/80754af9/idna_1593446292537/work
 imageio @ file:///tmp/build/80754af9/imageio_1594161405741/work
 imagesize==1.2.0
 importlib-metadata @ file:///C:/ci/importlib-metadata_1593446511143/work
