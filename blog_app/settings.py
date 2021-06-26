@@ -60,7 +60,7 @@ ROOT_URLCONF = 'blog_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,6 +92,8 @@ REST_FRAMEWORK = {
             'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Password validation
