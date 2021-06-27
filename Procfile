@@ -1,1 +1,1 @@
-web: gunicorn blog_app.wsgi:application --log file - --log-level debug
+web: gunicorn blog_app.wsgi:application --log file --log-level
