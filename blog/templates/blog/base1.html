@@ -50,6 +50,22 @@
         </nav>
       </header>
 
+      {% if user.is_authenticated %}
+        <div id="home">
+          <section id="hero-banner">
+              <div class="banner-inner">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <h2 style="font-family: 'Noto serif JP', serif; font-weight: 800;">Your Ultimate <b>BLOG</b> Space</h2>
+                              <p style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #444444; line-height: 40px; font-family: 'Noto serif JP', serif; font-weight: 600;">“The first thing you need to decide when you build your blog is what you want to<br> accomplish with it, and what it can do if successful.”</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        </div>
+      {% else %}
       <div id="home">
         <section id="hero-banner">
             <div class="banner-inner">
@@ -67,6 +83,7 @@
             </div>
         </section>
       </div>
+      {% endif %}
 
       <section class="container">
           <div class="row">
