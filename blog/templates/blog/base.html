@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +25,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top" style="padding: 0px 30px;">
           <div class="container">
-            <a class="navbar-brand" href="{% url 'blog-home' %}"><img src="{% static 'images/first_draft.jpeg' %}" height="75px" width="110px" alt=""></a>
+            <a class="navbar-brand" href="{% url 'blog-home' %}"><img src="{% static 'images/first_ draft.jpeg' %}" height="75px" width="110px" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -77,7 +78,8 @@
           <div class="container p-4 pb-0">
             <!-- Section: Form -->
             <section class="">
-              <form action="">
+              <form action="" method="POST">
+                {% csrf_token %}
                 <!--Grid row-->
                 <div class="row d-flex justify-content-center">
                   <!--Grid column-->
@@ -96,11 +98,11 @@
                     </div>
                   </div>
                   <!--Grid column-->
-        
+
                   <!--Grid column-->
                   <div class="col-auto">
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-outline-light mb-4">
+                    <button type="button" class="btn btn-outline-light mb-4" onclick="PromptBox()">
                       Subscribe
                     </button>
                   </div>
@@ -121,6 +123,12 @@
           <!-- Copyright -->
         </footer>
       </div>
+
+      <script>
+        function PromptBox(){
+          prompt('Thanks for subscribing to our portal! We will keep you updated with anything new!');
+        }
+      </script>
 
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
