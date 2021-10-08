@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -112,7 +113,8 @@
               <div class="container p-4 pb-0">
                 <!-- Section: Form -->
                 <section class="">
-                  <form action="" role="form" method="POST">
+                  <form action="" method="POST">
+                    {% csrf_token %}
                     <!--Grid row-->
                     <div class="row d-flex justify-content-center">
                       <!--Grid column-->
