@@ -1,3 +1,4 @@
+from django.db.models import query
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
@@ -79,4 +80,12 @@ def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
 
 
+class BlogSearchView(ListView):
+    model = Post
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
+    paginate_by = 5
 
+    def get_queryset(self):
+        query = self.request.GET.get('qu')
+        return Post.objects.filter(title__icontains=query).order_by('-date_posted')
