@@ -2,14 +2,7 @@
 {% load static %}
 {% block content %}
   <div class="col-md-11">
-    <br><br><br>
-      <div class="text-center">
-          <form id="demo-2" method="GET" action="{% url 'search_blogs' %}">
-            <legend style="font-size: 20px;">Search for Blogs: </legend>
-              <input type="search" name="qu" placeholder="Search Blogs">
-          </form>
-      </div>
-      <br>
+    <br><br><br><br>
     <div style="font-family: 'Noto Serif JP', serif; font-weight: 700; text-align: center; font-size: 2.2rem;">Most Recent Blogs</div><br>
     {% for post in posts %}
         <article class="media content-section">
@@ -76,7 +69,7 @@ input[type=search] {
   transition: all .5s;
 }
 input[type=search]:focus {
-  width: 130px;
+  width: 160px;
   background-color: #fff;
   border-color: #66CC75;
   
@@ -95,7 +88,7 @@ input[type=search]:focus {
   background-color: #fff;
 }
 #demo-2 input[type=search]:focus {
-  width: 130px;
+  width: 160px;
   padding-left: 32px;
   color: #000;
   background-color: #fff;
