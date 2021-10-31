@@ -17,7 +17,15 @@
       </div>
       <h2 class="article-title" style="font-family: 'Noto Serif JP', serif; font-weight: 600;">{{ object.title }}</h2><br>
       <p class="article-content" style="font-family: 'Noto Serif JP', serif;">{{ object.content }}</p>
+      <hr>
+            <a target="_blank" href="https://api.whatsapp.com/send?text={{ post.title }}%20{{ post.content }}" title="Share to whatsapp"><img src="https://icons.iconarchive.com/icons/tinylab/android-lollipop-apps/128/Whatsapp-icon.png" height="26px" alt="whatsapp" width="26px"></a>&nbsp;&nbsp;
+            <a href="https://www.facebook.com/sharer.php?u=https://myfirstdraft.herokuapp.com/{% url 'post-detail' post.id %}" target="_blank" title="Share to Facebook"><img src="https://icons.iconarchive.com/icons/yootheme/social-bookmark/128/social-facebook-button-blue-icon.png" alt="facebook" height="20px" width="20px"></a>&nbsp;&nbsp;
+            <a href="https://twitter.com/share?url=https://myfirstdraft.herokuapp.com/{% url 'post-detail' post.id %}&text={{ post.title }}&via=[via]&hashtags=[hashtags]" target="_blank" title="Share to twitter"><img src="https://icons.iconarchive.com/icons/xenatt/minimalism/128/App-Twitter-icon.png" alt="twitter" height="24px" width="24px"></a>&nbsp;&nbsp;
+            <a href="https://pinterest.com/pin/create/bookmarklet/?media={{ post.author.profile.image.url }}&url=https://myfirstdraft.herokuapp.com/{% url 'post-detail' post.id %}&is_video=[is_video]&description={{ post.title }}" target="_blank" title="Share to Pinterest"><img src="https://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Pinterest-icon.png" height="21px" width="21px" alt="pinterest"></a>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/shareArticle?url=https://myfirstdraft.herokuapp.com/{% url 'post-detail' post.id %}&title={{ post.title }}" target="_blank" title="Share to Linkedin"><img src="https://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Linkedin-icon.png" height="21px" width="21px" alt="linkedin"></a>
+            <a href="mailto:{{ post.author.email }}" style="float: right;" title="Mail to Author"><img src="https://icons.iconarchive.com/icons/zerode/plump/128/Mail-icon.png" height="21px" width="21px" alt="Mail"></a>
     </div>
   </article>
+  <br><br><br><br><br>
 </div>
 {% endblock content %}
