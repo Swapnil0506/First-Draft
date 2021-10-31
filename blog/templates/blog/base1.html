@@ -36,11 +36,21 @@
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
+                <div style="margin-right:15px; font-size: 20px">
+                  <form id="demo-2" method="GET" action="{% url 'search_blogs' %}">
+                      <input type="search" name="qu" placeholder="Search Blogs">
+                  </form>
+                </div>
                 <a class="nav-item nav-link" style="margin-left: 15px; font-size: 20px;">Hey, {{user.username}} &#128516;</a>
                 <a class="nav-item nav-link" href="{% url 'post-create' %}" style="margin-left:15px; font-size: 20px">Create Post</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}" style="margin-left:15px; font-size: 20px">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}" style="margin-left:15px; font-size: 20px">Logout</a>
                 {% else %}
+                <div style="margin-right:15px; font-size: 20px">
+                  <form id="demo-2" method="GET" action="{% url 'search_blogs' %}">
+                      <input type="search" name="qu" placeholder="Search Blogs">
+                  </form>
+                </div>
                 <a class="nav-item nav-link" href="{% url 'login' %}" style="margin-left:15px; font-size: 20px">Sign In</a>
                 <a class="nav-item nav-link" href="{% url 'register' %}" style="margin-left:15px; font-size: 20px">Register</a>
                 {% endif %}
@@ -156,6 +166,12 @@
               <!-- Copyright -->
             </footer>
           </div>
+        
+        <script>
+            function AlertBox(){
+              alert('Thanks for subscribing to our portal! We will keep you updated if an interesting story/blog/article comes up!');
+            }
+        </script>
 
     <style>
         #hero-banner{
