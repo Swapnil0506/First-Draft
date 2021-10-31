@@ -74,7 +74,17 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             return True
         return False
 
+class BlogSearchView(ListView):
+    model = Post
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
+    paginate_by = 5
 
+    def get_queryset(self):
+        query = self.request.GET.get('qu')
+        return Post.objects.filter(title__icontains=query).order_by('-date_posted')
+    
+    
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
 
